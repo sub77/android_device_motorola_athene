@@ -3,6 +3,12 @@
 Device: Motorola G4 Plus (2016)
 Codename: Athene
 
+```
+Big thanks to:
+@pranav01 (For all the initial help and server :P :D) - https://github.com/pranav01
+@CTXz (For some crucial information that helped me) - https://github.com/CTXz
+```
+
 Add to `.repo/local_manifests/athene.xml`:
 
 ```xml
