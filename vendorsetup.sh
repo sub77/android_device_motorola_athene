@@ -1,0 +1,3 @@
+add_lunch_combo tipsy_athene-user
+add_lunch_combo tipsy_athene-userdebug
+add_lunch_combo tipsy_athene-eng
