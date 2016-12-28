@@ -162,7 +162,7 @@ USE_SENSOR_MULTI_HAL := true
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/multirom/mrom-fstab.athene
+TARGET_RECOVERY_FSTAB := device/motorola/athene/multirom/mrom-fstab.athene
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -191,19 +191,19 @@ TARGET_RECOVERY_IS_MULTIROM := true
 MR_NO_KEXEC := enabled
 MR_CONTINUOUS_FB_UPDATE := true
 MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := $(LOCAL_PATH)/multirom/mr_init_devices.c
+MR_INIT_DEVICES := device/motorola/athene/multirom/mr_init_devices.c
 MR_DPI := xhdpi
 MR_DPI_FONT := 400
 MR_USE_MROM_FSTAB := true
-MR_FSTAB := $(LOCAL_PATH)/multirom/mrom-fstab.athene
+MR_FSTAB := device/motorola/athene/multirom/mrom-fstab.athene
 MR_KEXEC_MEM_MIN := 0x20000000
-MR_DEVICE_HOOKS := $(LOCAL_PATH)/multirom/mr_hooks.c
+MR_DEVICE_HOOKS := device/motorola/athene/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 4
 MR_USE_QCOM_OVERLAY := true
-MR_QCOM_OVERLAY_HEADER := $(LOCAL_PATH)/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_HEADER := device/motorola/athene/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
-MR_INFOS := $(LOCAL_PATH)/multirom/mrom_infos
+MR_INFOS := device/motorola/athene/multirom/mrom_infos
 MR_DEVICE_SPECIFIC_VERSION := e
 MR_DEVICE_VARIANTS := athene athene_f xt1621 xt1622 xt1625 xt1626 xt1640 xt1641 xt1642 xt1643 xt1644
 MR_ENCRYPTION := true
@@ -212,16 +212,12 @@ DEVICE_RESOLUTION := 1080x1920
 MR_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 # Versioning
-include $(LOCAL_PATH)/multirom/MR_REC_VERSION.mk
+include device/motorola/athene/multirom/MR_REC_VERSION.mk
 BOARD_MKBOOTIMG_ARGS += --board mrom$(MR_REC_VERSION)
 MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
 #Force populating /dev/block/platform/msm_sdcc.1/by-name
 #from the emmc
 MR_POPULATE_BY_NAME_PATH := "/dev/block/platform/msm_sdcc.1/by-name"
-
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
