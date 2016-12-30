@@ -48,6 +48,13 @@ BOARD_MKBOOTIMG_ARGS :=  --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --
 BOARD_CUSTOM_BOOTIMG_MK := device/motorola/athene/mkbootimg.mk
 TARGET_PREBUILT_KERNEL := device/motorola/athene/kernel
 
+ifndef TARGET_PREBUILT_KERNEL
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+TARGET_KERNEL_CONFIG := cm_athene_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8952
+endif
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x02000000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x02000000
@@ -66,3 +73,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_INCLUDE_CRYPTO := true
 TW_THEME := portrait_hdpi
+
+# MultiROM
+TARGET_RECOVERY_IS_MULTIROM := true
+-include device/motorola/athene/multirom/BoardConfigMultirom.mk
