@@ -204,7 +204,7 @@ MR_QCOM_OVERLAY_HEADER := device/motorola/athene/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_QCOM_OVERLAY_HEAP_ID_MASK := 2
 MR_INFOS := device/motorola/athene/multirom/mrom_infos
-MR_DEVICE_SPECIFIC_VERSION := e
+MR_DEVICE_SPECIFIC_VERSION := f
 MR_DEVICE_VARIANTS := athene athene_f xt1621 xt1622 xt1625 xt1626 xt1640 xt1641 xt1642 xt1643 xt1644
 MR_ENCRYPTION := true
 # bootmenu

@@ -11,7 +11,7 @@ const char *mr_init_devices[] =
 	"/sys/class/graphics/fb1",
 	"/sys/devices/virtual/graphics/fb0",
 	"/sys/devices/virtual/graphics/fb1",
-	
+
 	"/sys/block/mmcblk0*",
 	"/sys/block/mmcblk0/mmcblk0*",
 	"/sys/block/mmcblk0/mmcblk0p1", //modem
@@ -34,25 +34,41 @@ const char *mr_init_devices[] =
 	"/sys/devices/msm_sdcc.1/mmc_host*",
 	"/sys/devices/msm_sdcc.2/mmc_host*",
 
-	// input	
-	"/sys/devices/gpio_keys.85/input*",
-	"/sys/devices/gpio_keys.85/input/input2",
-	"/sys/devices/virtual/input*",
-	"/sys/devices/virtual/misc/uinput",
-	
+    // for touchpanel & gpio
+    "/sys/class/input/input0",
+    "/sys/class/input/input0/event0",
+    "/sys/class/input/input1",
+    "/sys/class/input/input1/event1",    
+    "/sys/class/input/input2",
+    "/sys/class/input/input2/event2",
+    "/sys/class/input/input3",
+    "/sys/class/input/input3/event3",    
+    "/sys/class/input/input4",
+    "/sys/class/input/input4/event4",
+    "/sys/class/input/input5",
+    "/sys/class/input/input5/event5",
+    "/sys/class/input/input6",
+    "/sys/class/input/input6/event6",
+    "/sys/class/input/input7",
+    "/sys/class/input/input7/event7",
+    "/sys/class/input/input8",
+    "/sys/class/input/input8/event8",
+    "/sys/class/input/input9",
+    "/sys/class/input/input9/event9",  
+
 	// USB drive
 	"/sys/module/xhci-hcd*",
 	"/sys/bus/platform/drivers/xhci-hcd*",
-	
+
 	// for adb
 	"/sys/devices/virtual/tty/ptmx",
 	"/sys/devices/virtual/misc/android_adb",
 	"/sys/devices/virtual/android_usb/android0/f_adb",
 	"/sys/bus/usb",
-	
+
 	// for qualcomm overlay - /dev/ion
 	"/sys/devices/virtual/misc/ion",
-	
+
 	// Encryption
 	//"/sys/devices/virtual/misc/device-mapper",
 	//"/sys/devices/virtual/qseecom/qseecom",
